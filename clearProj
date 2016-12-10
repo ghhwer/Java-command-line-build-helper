@@ -1,0 +1,31 @@
+#!/bin/bash
+#EDIT THIS
+ROOT="/home/ghhwer/Desktop/test"
+
+#DON'T TOUCH
+BUILD="$ROOT/build"
+BIN="$ROOT/bin"
+function line {
+echo "---------------------------------------------------------------"
+}
+function void {
+echo ""
+}
+
+void
+echo "clearing project at:"
+echo "$ROOT"
+
+if [ "$(ls -A $BIN)" ]; then
+	if [ $1 == "-b" ];
+	then 
+		rm -r $BIN/*
+	fi
+fi
+if [ "$(ls -A $BUILD)" ]; then
+	rm -r $BUILD/*
+fi
+
+line
+echo "DONE!"
+line
