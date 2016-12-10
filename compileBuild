@@ -16,7 +16,7 @@ ARG1=$1
 ARG2=$2
 
 if [ ! -d "$SRC" ] || [ ! "$(ls -A $SRC)" ]; then
-	echo "you must at least have a /src folder with files on it!"
+	echo "you must at least have a /src folder with files in it!"
 	exit
 else
 	if [ ! -d "$BUILD" ]; then
