@@ -1,10 +1,10 @@
 #!/bin/bash
-#EDIT THIS
-ROOT="/home/ghhwer/Desktop/test"
-
 #DON'T TOUCH
+_script="$(readlink -f ${BASH_SOURCE[0]})"
+ROOT="$(dirname $_script)"
 BUILD="$ROOT/build"
 BIN="$ROOT/bin"
+
 function line {
 echo "---------------------------------------------------------------"
 }
@@ -15,13 +15,15 @@ echo ""
 void
 echo "clearing project at:"
 echo "$ROOT"
-
+#checks if there are files in /bin folder
 if [ "$(ls -A $BIN)" ]; then
+	#checks if user requested /bin removal
 	if [ "$1" == "-b" ];
 	then 
 		rm -r $BIN/*
 	fi
 fi
+#cleans project
 if [ "$(ls -A $BUILD)" ]; then
 	rm -r $BUILD/*
 fi
