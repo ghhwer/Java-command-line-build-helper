@@ -86,7 +86,7 @@ else
 
 	#runs jar file if asked to
 	line
-	if [ "$ARG1" == "-r " ] || [ "$ARG2" == "-r " ];
+	if [ "$ARG1" == "-r" ] || [ "$ARG2" == "-r" ];
 		then 
 			echo "Jar ready! running... "
 			line
