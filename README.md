@@ -1,5 +1,5 @@
 # Java-command-line-build-helper
-This little bash script makes it easy to compile, build executable jar files and run java programs without the use of any IDE. (Unix Only)
+This little bash script makes it easy to compile, build executable jar files and run java programs without the use of any IDE.
 
 -------------------------------------------------------------------------------------------------------------------------------
 Just place your java files on the /src folder and your libraries on the /libs folder. change your project name and set your main class in the file "compileBuildJar" and execute:
